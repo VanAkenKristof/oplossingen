@@ -40,7 +40,7 @@ $strmain = strrev($dag);
 
 $result = substr($strmain, 0, 1); //result is first letter
 $result1=str_replace($result,'',$strmain);//now your result1 is everything but first letter
-$result2=lcfirst($result1); //now result2 is everything but first letter with first letter as capital
+$result2=lcfirst($result1); //now result2 is everything but first letter with first letter of rest as capital
 
 $dag=strrev($result.$result2);
 
