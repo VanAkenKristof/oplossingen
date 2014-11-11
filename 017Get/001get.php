@@ -1,12 +1,12 @@
 <?php 
 
-    $individueelArtikel = false;  
+$individueelArtikel = false;  
 
-    if ( isset ( $_GET['id'] ) )
-    {
-        $id = $_GET['id'];
-        $individueelArtikel = true;    
-    }
+if ( isset ( $_GET['id'] ) )
+{
+    $id = $_GET['id'];
+    $individueelArtikel = true;    
+}
 
 $artikels = array(
     array(
@@ -81,7 +81,7 @@ array(
     <link rel="author" href="humans.txt">
 </head>
 <body>
-        <?php if ( !$individueelArtikel ): ?>
+    <?php if ( !$individueelArtikel ): ?>
     <div id="bigwrapper">
         <?php foreach ( $artikels as $id => $artikel ): ?>
         <div id="wrapper">
@@ -94,16 +94,16 @@ array(
             </div>
         </div>
     <?php endforeach ?>
-    </div>
+</div>
 <?php else : ?>
     <div id="container">
-            <div id="titel"><h1><?php echo $artikels[$id]['titel'] ?></h1>
+        <div id="titel"><h1><?php echo $artikels[$id]['titel'] ?></h1>
             <p><?php echo $artikels[$id]['datum'] ?></p>
-            </div>
-            <div id="afbeelding"><img src="img/<?php echo $artikels[$id]['afbeelding'] ?>"></img></div>
-            <div id="text"><p><?php echo $artikels[$id]['inhoud']?></p>
-            </div>
         </div>
+        <div id="afbeelding"><img src="img/<?php echo $artikels[$id]['afbeelding'] ?>"></img></div>
+        <div id="text"><p><?php echo $artikels[$id]['inhoud']?></p>
+        </div>
+    </div>
 
 <?php endif?>
 <script src="js/main.js"></script>
