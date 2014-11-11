@@ -81,8 +81,8 @@ array(
     <link rel="author" href="humans.txt">
 </head>
 <body>
-    <div id="bigwrapper">
         <?php if ( !$individueelArtikel ): ?>
+    <div id="bigwrapper">
         <?php foreach ( $artikels as $id => $artikel ): ?>
         <div id="wrapper">
             <div id="titel"><h1><?php echo $artikel['titel'] ?></h1>
@@ -105,7 +105,6 @@ array(
             </div>
         </div>
 
-        <div>
 <?php endif?>
 <script src="js/main.js"></script>
 </body>
