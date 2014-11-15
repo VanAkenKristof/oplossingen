@@ -24,6 +24,8 @@ if(!isset($_SESSION['nickname'])){
  <link rel="stylesheet" href="css/style.css">
  <link rel="author" href="humans.txt">
 </head>
+
+
 <body>
  <div id="container">
 
