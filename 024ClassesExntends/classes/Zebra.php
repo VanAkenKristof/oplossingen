@@ -1,6 +1,6 @@
 <?php 
 
-class Lion extends Animal
+class Zebra extends Animal
 {
 	protected $species;
 	
