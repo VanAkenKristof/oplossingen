@@ -1,11 +1,13 @@
 <?php
 session_start();
 
-$emptylist = true;
+$firstpost = true;
 $message1 = "Je hebt nog geen TODO's toegevoegd. Zo weinig werk of meesterplanner?";
 
-
+if ( isset ( $_POST[ 'submit' ] ) ) {
 	$_SESSION['todo'][] = $_POST['todoitem'];
+}
+
 
 ?>
 
@@ -28,13 +30,12 @@ $message1 = "Je hebt nog geen TODO's toegevoegd. Zo weinig werk of meesterplanne
 </head>
 <body>
 	<h1>Todo App</h1>
-	<?php if (!$emptylist): ?>
-	<?php echo $message1?>
+	<?php if (isset($_SESSION['todo'])): ?>
+	<?php foreach($_SESSION['todo'] as $id => $todo): ?>
+		<?php echo $todo."<br>"?>
+<?php endforeach; ?>
 <?php else :?>
-<!--  <?php foreach ( $_SESSION['todo'] as $item ): ?>
-	<?php echo $_SESSION['todo'][$item]?>
- <?php endforeach ?> -->
- <?php var_dump($_SESSION['todo'])?>
+	<?php echo "Je hebt nog geen TODO's toegevoegd. Zo weinig werk of meesterplanner?"?>
 <?php endif ?>
 
 
