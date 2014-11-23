@@ -11,30 +11,30 @@ class percent {
 	public function __construct($new, $unit){
 		echo 'Gelukt! <br />';
 
-		$new1 = $new;
-		$unit1 = $unit;
+		$this->new1 = $new;
+		$this->unit1 = $unit;
 
 		$absolute = $new/$unit;
 		$relative = $absolute-1;
 		$hundred = $absolute * 100;
 
 		if ($absolute>1) {
-			$nominal = "positive";
+			$this->nominal = "positive";
 		}
 		elseif ($absolute=1) {
-			$nominal = "status-quo";
+			$this->nominal = "status-quo";
 		}
 		else{
-			$nominal = "negative";
+			$this->nominal = "negative";
 		}
 
 		function formatNumber($number){
 			return round($number,2);
 		}
 
-		$absolute = formatNumber($absolute);
-		$relative = formatNumber($relative);
-		$hundred = formatNumber($hundred);
+		$this->absolute = formatNumber($absolute);
+		$this->relative = formatNumber($relative);
+		$this->hundred = formatNumber($hundred);
 	}
 
 
