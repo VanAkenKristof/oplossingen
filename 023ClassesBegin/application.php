@@ -19,7 +19,7 @@
         <link rel="author" href="humans.txt">
     </head>
     <body>
-        <p>Hoeveel percent is<?php echo $percentCalculator->new1?></p>
+        <p>Hoeveel percent is <?php echo $percentCalculator->new1?> van <?php echo $percentCalculator->unit1?></p>
 
 
 

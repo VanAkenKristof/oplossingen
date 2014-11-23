@@ -5,9 +5,14 @@ class percent {
 	public $relative;
 	public $hundred;
 	public $nominal;
+	public $new1;
+	public $unit1;
 
 	public function __construct($new, $unit){
 		echo 'Gelukt! <br />';
+
+		$new1 = $new;
+		$unit1 = $unit;
 
 		$absolute = $new/$unit;
 		$relative = $absolute-1;
